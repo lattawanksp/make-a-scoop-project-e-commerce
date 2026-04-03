@@ -6,6 +6,7 @@
 
   --font-display: "Bebas Neue", sans-serif; /* ฟอนต์หัวข้อใหญ่ */
   --font-mono: "Space Mono", monospace; /* ฟอนต์ code / label */
+  --font-body: "Noto Sans Thai", sans-serif; /* ฟอนต์ภาษาไทย */
 }
 
 /* RESET & BASE (ล้าง margin/padding เริ่มต้นของ browser) */
@@ -109,4 +110,78 @@ img {
 .cartButton:hover {
   background: var(--color-grape-dark);
   border-color: var(--color-grape-light);
+}
+
+/*  <!--Hero section --> */
+.hero {
+  min-height: 100vh; /* เต็มหน้าจอ */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* แบ่งคอลัมน์ */
+  align-items: center;
+
+  background-image: url("/src/Gemini_Generated_Image_x2tkizx2tkizx2tk.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* hero right text */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-season {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-grape-light);
+  text-transform: uppercase;
+}
+
+/* หัวข้อใหญ่มาก */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 6rem); /* ปรับขนาดตาม viewport */
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+}
+/* 01 สีม่วง */
+.hero-title-number {
+  color: var(--color-grape-light);
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-dim);
+  max-width: 480px;
+}
+
+.hero-price {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--color-yellow);
+}
+
+/* ปุ่ม Add to Cart หลัก */
+.add-to-cart-btn {
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--color-grape);
+  color: var(--color-white);
+  border: 1px solid #a98fd4;
+  padding: 16px 36px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--color-grape-light);
+  transform: translateY(-2px); /* ลอยขึ้นนิดนึงตอน hover */
 }

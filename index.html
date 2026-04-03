@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Make A Scoop - Inspired Ice Cream Lab</title>
+    <title>Make A Scoop - Idea Ice Cream Lab</title>
     <link rel="stylesheet" href="/style.css" />
     <!--Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Thai:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <!--NAVBAR -->
@@ -20,10 +22,10 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#newDrop">New Drop</a></li>
-        <li><a href="#newDrop">Current Drop</a></li>
-        <li><a href="#collection">Our Story</a></li>
-        <li><a href="#collection">About Us</a></li>
+        <li><a href="#newColl">New Collection</a></li>
+        <li><a href="#currentScoop">Current Scoop</a></li>
+        <li><a href="#ourStory">Our Story</a></li>
+        <li><a href="#aboutUs">About Us</a></li>
       </ul>
 
       <button class="cartButton" onclick="alert('Cart coming soon!')">
@@ -31,6 +33,29 @@
       </button>
     </nav>
 
-    <!--HERO -->
+    <main>
+      <!--HERO -->
+      <section id="hero" class="hero">
+        <!-- column box-->
+        <div class="coll1"></div>
+        <div class="coll2"></div>
+
+        <!-- right text -->
+        <div class="hero-text">
+          <p class="hero-season">Limited Series: Q2 2026</p>
+          <h1 class="hero-title">
+            PANTONE<br />
+            ON A CONE<br />
+            <span class="hero-title-number">01 - GENESIS</span>
+          </h1>
+          <p class="hero-description">
+            สัมผัสรสชาติใหม่... ที่เกิดจากแรงบันดาลใจจากรหัสสีระดับโลก
+            เปลี่ยนจินตนาการจากแผ่นโทนสีสู่ไอศกรีมโฮมเมดหลายรสชาติ
+          </p>
+          <p class="hero-price">฿ 180</p>
+          <button class="add-to-cart-btn">+ Add to Cart</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
