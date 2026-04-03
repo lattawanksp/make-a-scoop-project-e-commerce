@@ -4,6 +4,7 @@
   --color-grape-light: #a98fd4;
   --color-grape-dark: #4a3570;
   --color-gray: #888888;
+  --color-cream: #f2e8d5;
 
   --font-display: "Bebas Neue", sans-serif; /* ฟอนต์หัวข้อใหญ่ */
   --font-mono: "Space Mono", monospace; /* ฟอนต์ code / label */
@@ -187,7 +188,7 @@ img {
   transform: translateY(-2px); /* ลอยขึ้นนิดนึงตอน hover */
 }
 
-/*  ========= <!-- CSS ใช้กับ Head รอง ทุกอัน --> ========= */
+/*  ================ <!-- CSS ใช้กับ Head รอง ทุกอัน --> =============== */
 
 .head2-header {
   text-align: center;
@@ -218,7 +219,7 @@ img {
 
 /*  ========= <!-- New collection --> ========= */
 .section-new-Coll {
-  padding: 120px 80px;
+  padding: 170px 80px;
 }
 
 /* grid 4 การ์ด */
@@ -354,4 +355,265 @@ img {
 }
 .highlight {
   color: var(--color-grape-light); /* สีม่วง */
+}
+
+/*  ========= <!--Process idea --> ========= */
+
+.process-idea {
+  background: var(--color-cream);
+  padding-bottom: 50px;
+}
+
+.process-header {
+  padding: 80px 80px 40px 80px;
+  background: var(--color-cream);
+  text-align: center;
+}
+
+.process-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-grape-dark);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.process-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: 0.05em;
+  color: var(--color-bg);
+  margin-bottom: 12px;
+}
+
+/* แถวขั้นตอน */
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+/* แต่ละ step */
+.step {
+  flex: 1;
+  min-width: 180px;
+  max-width: 220px;
+  padding: 0 20px;
+}
+
+.step-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--color-grape-light);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.step-text h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-bg);
+  margin-bottom: 8px;
+}
+
+.step-text p {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ลูกศรระหว่าง step */
+.step-divider {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-grape-light);
+  align-self: center;
+  padding: 0 8px;
+  padding-bottom: 60px; /* เลื่อนลงให้อยู่ระดับเดียวกับ step */
+}
+
+/*  ========= <!--news letter --> ========= */
+.newsletter-section {
+  background-color: var(--color-bg);
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.newsletter-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.news-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: var(--color-grape-light);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.news-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+.news-description {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* กล่อง Form */
+.news-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.news-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 18px 24px;
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.news-submit-btn {
+  background-color: var(--color-grape-light);
+  color: var(--color-white);
+  padding: 0 30px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.news-submit-btn:hover {
+  background-color: var(--color-grape-dark);
+}
+
+/* ============================== MOBILE RESPONSIVE ==============================*/
+
+@media (max-width: 768px) {
+  /* --- Navbar --- */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* === Hero Section === */
+  .hero {
+    grid-template-columns: 1fr; /* เปลี่ยนจาก 3 คอลัมน์เป็นคอลัมน์เดียว */
+    padding: 120px 24px 60px;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+  }
+
+  /* === New Collection Grid ===*/
+  .section-new-Coll {
+    padding: 80px 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr; /*เหลือแถวเดียวพอ*/
+    gap: 30px;
+  }
+
+  /* ===Meet the Crew ===*/
+  .the-Crew {
+    flex-direction: column; /* รูปอยู่บน ข้อความอยู่ล่าง */
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  .the-Crew-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .crew-textBox {
+    width: 100%;
+  }
+
+  .crew-title {
+    font-size: 2.5rem;
+  }
+
+  /* === Process Idea ===*/
+  .process-header {
+    padding: 60px 24px 20px;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .step {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .step-divider {
+    display: none; /* ซ่อนลูกศรบนมือถือ เพราะเรียงเป็นแนวตั้ง*/
+  }
+
+  /* === Newsletter === */
+  .newsletter-section {
+    padding: 80px 24px;
+  }
+
+  .news-form {
+    flex-direction: column;
+    border: none;
+    gap: 12px;
+  }
+
+  .news-input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    text-align: center;
+  }
+
+  .news-submit-btn {
+    width: 100%;
+    padding: 18px;
+  }
 }
