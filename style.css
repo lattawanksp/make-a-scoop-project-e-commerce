@@ -158,7 +158,7 @@ img {
 .hero-description {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--color-gray);
+  color: var(--color-white);
   max-width: 480px;
 }
 
@@ -306,4 +306,52 @@ img {
 .btn-cart-small:hover {
   background: var(--color-grape);
   border-color: var(--color-grape);
+}
+
+/*  ========= <!--Meet the Crew --> ========= */
+.the-Crew {
+  background-color: #111111;
+  padding: 40px 80px 40px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.the-Crew-img {
+  width: 60%;
+  height: 300px;
+  background-image: url("/src/Mascots\ enjoying\ a\ colorful\ ice\ cream\ feast\ \(1\).png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0; /* กันไม่ให้ถูกย่อ */
+}
+
+.crew-textBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.crew-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-grape-light);
+  text-transform: uppercase;
+}
+
+.crew-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+
+.crew-sub {
+  font-size: 1rem;
+  color: var(--color-gray);
+  margin-bottom: 30px;
+}
+.highlight {
+  color: var(--color-grape-light); /* สีม่วง */
 }
