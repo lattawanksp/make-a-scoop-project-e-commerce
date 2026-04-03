@@ -3,6 +3,7 @@
   --color-white: #f5f0eb; /* สีตัวอักษร */
   --color-grape-light: #a98fd4;
   --color-grape-dark: #4a3570;
+  --color-gray: #888888;
 
   --font-display: "Bebas Neue", sans-serif; /* ฟอนต์หัวข้อใหญ่ */
   --font-mono: "Space Mono", monospace; /* ฟอนต์ code / label */
@@ -42,7 +43,7 @@ img {
   display: block;
 }
 
-/*  <!--NAVBAR --> */
+/*  ========= <!--Nav Bar --> ========= */
 .navbar {
   position: fixed; /*ฟิกnavbar*/
   top: 0;
@@ -112,7 +113,7 @@ img {
   border-color: var(--color-grape-light);
 }
 
-/*  <!--Hero section --> */
+/*  ========= <!--Hero section --> ========= */
 .hero {
   min-height: 100vh; /* เต็มหน้าจอ */
   display: grid;
@@ -157,7 +158,7 @@ img {
 .hero-description {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--color-dim);
+  color: var(--color-gray);
   max-width: 480px;
 }
 
@@ -184,4 +185,125 @@ img {
 .add-to-cart-btn:hover {
   background: var(--color-grape-light);
   transform: translateY(-2px); /* ลอยขึ้นนิดนึงตอน hover */
+}
+
+/*  ========= <!-- CSS ใช้กับ Head รอง ทุกอัน --> ========= */
+
+.head2-header {
+  text-align: center;
+}
+
+.head2-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-grape-light);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.head2-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.head2-sub {
+  font-size: 1rem;
+  color: var(--color-white);
+  margin-bottom: 30px;
+}
+
+/*  ========= <!-- New collection --> ========= */
+.section-new-Coll {
+  padding: 120px 80px;
+}
+
+/* grid 4 การ์ด */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Flavor card แต่ละใบ */
+
+.flavor-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+.flavor-card:hover {
+  border-color: var(--color-grape-light);
+}
+
+/* รูปภาพด้านบน */
+.flavor-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 220px;
+}
+
+/* ข้อมูลด้านล่าง */
+.flavor-info {
+  padding: 20px;
+}
+
+.flavor-code {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-gray);
+  margin-bottom: 4px;
+}
+
+.flavor-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.flavor-desc {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* ราคา + ปุ่ม อยู่คนละด้าน */
+.flavor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flavor-price {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-grape-light);
+}
+
+/* ปุ่ม Cart ใน Card */
+.btn-cart-small {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  padding: 6px 14px;
+}
+
+.btn-cart-small:hover {
+  background: var(--color-grape);
+  border-color: var(--color-grape);
 }
